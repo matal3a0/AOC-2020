@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-import sys
-
 with open("day1.txt") as f:
   data = list(map(int, f.read().splitlines()))
 
