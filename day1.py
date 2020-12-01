@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
-with open("day1.txt") as f:
-  data = list(map(int, f.read().splitlines()))
+data = ([int(i) for i in open('day1.txt').readlines()])
 
 for x in data:
   for y in data:
