@@ -11,7 +11,8 @@ with open("day2.txt") as f:
 
     if m <= pw.count(c) <= n:
       valida += 1
-    if pw[m-1] == c and not pw[n-1] == c or pw[n-1] == c and not pw[m-1] == c:
+    #if pw[m-1] == c and not pw[n-1] == c or pw[n-1] == c and not pw[m-1] == c:
+    if (pw[m-1] == c) ^ (pw[n-1] == c):
       validb += 1
 
 print("Valid passwords Part 1:",valida)
