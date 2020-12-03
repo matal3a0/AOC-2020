@@ -9,22 +9,15 @@ grid = []
 for line in sys.stdin.readlines():
   grid.append(list(x for x in line if x != '\n'))
 
-width = len(grid[0])
-height = len(grid)
-
 for s in slopes:
-  x = s[0]
-  y = s[1]
-
-  xpos, ypos, trees = 0, 0, 0
+  x, y, trees = 0, 0, 0
   
-  while ypos < height-1:
-    xpos = (xpos + x) % width
-    ypos += y
-    if grid[ypos][xpos] == '#':
+  while y < len(grid)-1:
+    x = (x + s[0]) % len(grid[0])
+    y += s[1]
+    if grid[y][x] == '#':
       trees += 1
   print("Slope:",s,"Trees:",trees)
-  
   totaltrees *= trees
 
 print("Total trees:", totaltrees)
