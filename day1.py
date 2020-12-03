@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
-data = ([int(i) for i in open('day1.txt').readlines()])
+import sys
+
+data = ([int(i) for i in sys.stdin.readlines()])
 
 for x in data:
   for y in data:
@@ -9,4 +11,3 @@ for x in data:
     for z in data:
       if y+x+z == 2020:
         print('b:',x*y*z)
-        
