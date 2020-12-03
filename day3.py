@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-slopes = [ [1,1], [3,1], [5,1], [7,1], [1,2] ]
+slopes = [ (1,1), (3,1), (5,1), (7,1), (1,2) ]
 totaltrees = 1
 
 with open("day3.txt") as f:
