@@ -19,9 +19,9 @@ def main():
     col = decode(line[-4:],0,7)
     seats.append(row*8+col)
 
-  print('Highest:',max(seats))
-
   seats.sort()
+  print('Highest:',seats[-1])
+
   for i in range(seats[0], seats[-1]):
     if not i in seats:
       print("My seat:",i)
